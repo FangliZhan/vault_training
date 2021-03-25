@@ -1,0 +1,4 @@
+{{- /* /home/ec2-user/vault-agent/templates/cert.ctmpl */ -}}
+{{ with secret "pki_int/issue/vault-dot-com" "common_name=test.vault.com" }}
+{{ .Data.certificate }}
+{{ end }}
