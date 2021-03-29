@@ -1,4 +1,4 @@
-pid_file = "./pidfile"
+pid_file = "/home/ec2-user/vault-agent/pidfile"
 exit_after_auth = false
 
 auto_auth {
@@ -16,7 +16,6 @@ auto_auth {
     }
   }
 }
-
 cache {
   use_auto_auth_token = true
 }
@@ -50,3 +49,7 @@ template {
   destination = "/home/ec2-user/vault-agent/output/nginx.key"
 }
 
+template {
+  source      = "/home/ec2-user/vault-agent/templates/dbconfig.yml.tmpl"
+  destination = "/home/ec2-user/vault-agent/output/dbconfig.yml"
+}
