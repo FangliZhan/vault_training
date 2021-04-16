@@ -1,0 +1,7 @@
+path "kv/apps/*" {
+  capabilities = ["read", "update"]
+}
+
+path "kv/*" {
+  capabilities = ["list"]
+}
